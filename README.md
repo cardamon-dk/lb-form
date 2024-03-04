@@ -63,7 +63,7 @@ Vue.use(lbform, { extComponents: { compA: compA, compB: compB } });
 ```vue
 // xxx.vue
 <template>
-	<lbform ref="space_form" :form-items="formItems" :model="form" :rules="rules"></lbform>
+	<lbform ref="lb_form" :form-items="formItems" :model="form" :rules="rules"></lbform>
 </template>
 <script>
 export default {
