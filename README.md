@@ -1,4 +1,4 @@
-## SpaceForm
+## lbform
 
 ##### 版本记录
 #### 1.0.2
@@ -29,8 +29,8 @@ npm i lb-form
 ```
 ```js
 // main.js
-import SpaceForm from 'lb-form';
-Vue.use(SpaceForm);
+import lbform from 'lb-form';
+Vue.use(lbform);
 ```
 
 ##### 注册拓展组件
@@ -38,12 +38,12 @@ Vue.use(SpaceForm);
 ###### 局部注册
 
 ```js
-// 局部注册主要是为了某些与业务耦合较大不适合全局注册的组件提供，注册完之后会生成一个包含注入组件的spaceform实例，可以用于局部注册
+// 局部注册主要是为了某些与业务耦合较大不适合全局注册的组件提供，注册完之后会生成一个包含注入组件的lbform实例，可以用于局部注册
 import { addComponentsOnce } from 'lb-form';
 import compA from 'xxx/compA'; // 假设该组件与当前业务耦合严重，使用次数有限，不适合全局注册
-const spaceform = addComponentsOnce({ compA: compA }); // 只有导出的实例中会包含传入的组件，不会影响到全局的lb-form
+const lbform = addComponentsOnce({ compA: compA }); // 只有导出的实例中会包含传入的组件，不会影响到全局的lb-form
 export default {
-	components: { spaceform }
+	components: { lbform }
 };
 ```
 
@@ -52,18 +52,18 @@ export default {
 ```js
 // main.js
 
-// 全局注册的拓展组件在项目任何地方都可以在spaceform中使用
-import SpaceForm from 'lb-form';
+// 全局注册的拓展组件在项目任何地方都可以在lbform中使用
+import lbform from 'lb-form';
 import compA from 'xxx/compA';
 import compB from 'xxx/compB';
 
-Vue.use(SpaceForm, { extComponents: { compA: compA, compB: compB } });
+Vue.use(lbform, { extComponents: { compA: compA, compB: compB } });
 ```
 
 ```vue
 // xxx.vue
 <template>
-	<SpaceForm ref="space_form" :form-items="formItems" :model="form" :rules="rules"></SpaceForm>
+	<lbform ref="space_form" :form-items="formItems" :model="form" :rules="rules"></lbform>
 </template>
 <script>
 export default {
@@ -287,7 +287,7 @@ export default {
 
 - 该组件内部表单项之间的布局使用 el-layout 控制，这种布局方式在某些情况下不好配置，可能需要拓展其他布局方式，例如直接通过 style 或 class 或 width 控制等。
 - 目前该组件对于同级多表单的渲染可以通过 group 属性解决，但是对于多级表单（如果有的话）的渲染无法通过配置项处理，只能通过 slot 自定义解决。
-- 内置组件中的 person，应该是作业票的业务组件，不够公共化，不应该当作 spaceform 的内置组件，需要找个版本剔除出去。
+- 内置组件中的 person，应该是作业票的业务组件，不够公共化，不应该当作 lbform 的内置组件，需要找个版本剔除出去。
 - 从代码逻辑上看，全局注册的组件在局部注册时好像会失效，需要测试优化。
 #### 展望
 
