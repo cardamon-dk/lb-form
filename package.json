@@ -19,5 +19,8 @@
     "el-form"
   ],
   "author": "cardamon",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "element-ui": "^2.15.14"
+  }
 }
