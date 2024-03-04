@@ -1,6 +1,6 @@
 {
   "name": "@lite-base/lb-form",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "简单表单配置器",
   "main": "main.js",
   "directories": {
