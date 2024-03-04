@@ -1,0 +1,23 @@
+{
+  "name": "@lite-base/lb-form",
+  "version": "1.0.0",
+  "description": "简单表单配置器",
+  "main": "main.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cardamon-dk/lb-form"
+  },
+  "keywords": [
+    "form",
+    "element-ui",
+    "el-form"
+  ],
+  "author": "cardamon",
+  "license": "MIT"
+}
